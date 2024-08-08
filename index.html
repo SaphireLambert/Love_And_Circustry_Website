@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love And Circustry Website - Double Devil Studios</title>
-    <link rel="stylesheet" herf="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="header">
@@ -18,8 +18,8 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-        <div class = "headerText">
-            <p><span>Love And Circustry!</span><br> A dating sim bringing in different <br> queer cultures like Drag together!</p>
+        <div class = "header-text">
+            <p><span>Love And Circustry!</span><br> A dating sim bringing in different queer cultures like Drag together!</p>
             <h1>Log Line</h1>
         </div>
     </div>
@@ -35,11 +35,11 @@
                     <p>This will be a full description for the game and its content : </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Team</p>
-                        <p class="tab-links">Skills</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('team')">Team</p>
+                        <p class="tab-links" onclick = "opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick = "opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id = "team">
                         <ul>
                             <li><span>Taryn</span><br>Team Leader</li>
                             <li><span>Sara</span><br>Animator</li>
@@ -48,10 +48,49 @@
                             <li><span>Saphire</span><br>Game Programmer</li>
                         </ul>
                     </div>
-                    
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Taryns</span><br>Skills</li>
+                            <li><span>Sara</span><br>Skills</li>
+                            <li><span>Jordan</span><br>Skills</li>
+                            <li><span>Thomas</span><br>Skills</li>
+                            <li><span>Saphire</span><br>Skills</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Taryn</span><br>Education</li>
+                            <li><span>Sara</span><br>Education</li>
+                            <li><span>Jordan</span><br>Education</li>
+                            <li><span>Thomas</span><br>Education</li>
+                            <li><span>Saphire</span><br>Education</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
 </body>
 </html>

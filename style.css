@@ -62,25 +62,27 @@ nav ul li a:hover::after
 {
     width: 100%;
 }
-.headerText
+.header-text
 {
     margin-top: 20%;
+    margin-left: 10%;
     font-size: 30px;
 }
-.headerText h1
+.header-text h1
 {
     font-size: 60px;
     margin-top: 20px;
 }
-.headerText h1 span
+.header-text p span
 {
     color: red;
+    font-size: 100px;
 }
 /*----------------------- ABOUT ------------------------*/
 #about
 {
     padding: 80px 0;
-    color: #ababab;
+    color:black;
 }
 .row
 {
@@ -99,7 +101,7 @@ nav ul li a:hover::after
 }
 .about-col-02
 {
-    flex-basis: 60%;
+    flex-basis: 30%;
 }
 .sub-title
 {
@@ -114,7 +116,7 @@ nav ul li a:hover::after
 }
 .tab-links
 {
-    margin-right: 50px;
+    margin-right: 300px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
@@ -141,6 +143,14 @@ nav ul li a:hover::after
 }
 .tab-contents ul li span
 {
-    color: #b5b5b5;
-    font-size: 14px;
+    color: blue;
+    font-size: 24px;
+}
+.tab-contents
+{
+    display: none;
+}
+.tab-contents.active-tab
+{
+    display: block;
 }
